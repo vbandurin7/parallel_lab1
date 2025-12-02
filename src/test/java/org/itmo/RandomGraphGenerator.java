@@ -9,6 +9,7 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.stream.IntStream;
 
 public class RandomGraphGenerator {
+    private static final int PARALLEL_LEVEL = 4;
 
     private long pack(int u, int v) {
         return (((long) u) << 32) | (v & 0xffffffffL);
