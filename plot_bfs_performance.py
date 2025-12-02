@@ -29,8 +29,8 @@ plt.show()
 
 # --- График 2: Влияние числа потоков на время Parallel BFS ---
 plt.figure(figsize=(12,6))
-max_v = df['Vertices'].max()
-parallel_maxv = parallel_df[parallel_df['Vertices'] == max_v]
+max_v = 50000
+parallel_maxv = parallel_df[parallel_df['Vertices'] == 50000]
 plt.plot(parallel_maxv['Threads'], parallel_maxv['Time_ms'], marker='o', linestyle='-', color='red')
 plt.xlabel('Number of threads')
 plt.ylabel('Time (ms)')
