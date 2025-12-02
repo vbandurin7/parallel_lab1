@@ -95,7 +95,7 @@ class Graph {
             for (int i = from; i < to; i++) {
                 Integer vertex = frontier.get(i);
                 for (int v : adjList[vertex]) {
-                    if (visited.compareAndSet(v, 0, 1)) {
+                    if (visited.get(v) == 0 && visited.compareAndSet(v, 0, 1)) {
                         neighbourVertices.add(v);
                     }
                 }
